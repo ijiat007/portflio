@@ -1,0 +1,383 @@
+@charset "utf-8";
+
+@import "typo";
+@import "normalize";
+
+#app {
+  max-width: $max;
+  margin: 0 auto;
+  font-size: 1.6rem;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  padding: 30px 0 0;
+  text-align: center;
+  background: #fff;
+  text-align: center;
+  transition: transform .4s ease-in-out;
+
+  h1 {
+    font-size: 3.2rem;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+  }
+
+  &.fix {
+    transform: translateY(-69px);
+    h1 {
+      opacity: 0;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  max-width: $max;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+
+  li {
+    flex: 1;
+    position: relative;
+    border: 1px solid $line;
+    color: $graya;
+    &:not(:last-child) {
+      margin-right: -1px;
+    }
+
+    &:first-child {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+
+    &.active {
+      z-index: 1;
+      border-color: $color;
+      background: $color;
+      color: #fff;
+      animation: full .3s ease-in-out;
+      &::before {
+        content: '';
+      }
+    }
+
+    button {
+      width: 100%;
+      height: 100%;
+      padding: 8px 10px;
+    }
+
+    @include breakpoint {
+      flex: 1 1 auto;
+      padding: 10px 10px;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+  }
+}
+
+main {
+  padding: 150px 20px 0;
+  > section {
+    padding: 30px 0;
+    h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      span {
+        display: inline-block;
+        padding-top: 5px;
+        border-top: 2px solid $color;
+      }
+    }
+  }
+}
+
+footer {
+  padding: 30px 20px 40px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: $graya;
+}
+
+.rwd {
+  .item {
+    height: 22vh;
+    background: {
+      position: 50% 50%;
+      size: cover;
+    }
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  @include breakpoint {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+	  grid-auto-rows: minmax(300px, auto);
+    grid-gap: 10px;
+
+    .item {
+      height: auto;
+      &:nth-child(3n + 0) {
+        grid-row: span 2;
+      }
+      &:nth-child(5n + 0) {
+        grid-column: span 2;
+      }
+      &:not(:first-child) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.motion {
+  position: relative;
+  width: 258px;
+  height: 210px;
+  margin: 20px auto;
+
+  > div {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 86px;
+    height: 86px;
+    border-radius: 100%;
+    transform: translate(0, -50%);
+    animation: move 900ms ease-in-out infinite Alternate, color 7200ms ease-in infinite normal;
+  }
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    width: 1px;
+    height: 100px;
+    background: $graya;
+    transform: translate(-50%, -50%);
+    content: '';
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, -50%);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(100%, -50%);
+    opacity: 0;
+  }
+  94%,
+  100% {
+    transform: translate(200%, -50%);
+    opacity: 1;
+  }
+}
+
+@keyframes color {
+  0%,
+  24%,
+  25%,
+  49%,
+  50%,
+  74%,
+  75%,
+  100% {
+    background-color: $red;
+  }
+  8%,
+  16% {
+    background-color: $color1;
+  }
+  33%,
+  41% {
+    background-color: $color2;
+  }
+  58%,
+  66% {
+    background-color: $color3;
+  }
+  83%,
+  91% {
+    background-color: $color4;
+  }
+}
+
+// swiper
+.swiper {
+  position: relative;
+  margin: 0 -20px;
+
+  &-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-top: 60px;
+  }
+
+  &-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-slide {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    height: 450px;
+    padding: 20px;
+
+    background: {
+      position: 50% 50%;
+      size: cover;
+    }
+
+    .txt {
+      margin-top: auto;
+      text-align: right;
+      opacity: .6;
+      transition: all .4s ease-in;
+      color: #fff;
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    &-active,
+    &-duplicate-active {
+      .txt {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    &-invisible-blank {
+      visibility: hidden;
+    }
+
+    @include breakpoint {
+      height: 600px;
+      padding: 40px;
+      .txt {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &-pagination {
+    overflow-x: auto;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    padding: 0 0 20px 20px;
+    
+    > button {
+      overflow: hidden;
+      position: relative;
+      flex-shrink: 0;
+      height: 40px;
+      margin-right: 20px;
+      padding: 0 15px;
+      border: 1px solid $graya;
+      border-radius: 20px;
+      font-size: 1.4rem;
+      color: $graya;
+      white-space: nowrap;
+
+      &.swiper-pagination-bullet-active {
+        border-color: $color;
+        background: $color;
+        font-weight: bold;
+        color: #fff;
+      }
+    }
+
+    @include breakpoint {
+      padding: 0 0 20px 20px;
+      > button {
+        flex: 1 0 20%;
+        padding: 0 25px;
+      }
+    }
+  }
+
+  &-btn {
+    &-prev,
+    &-next {
+      position: absolute;
+      top: calc(50% + 30px);
+      z-index: 10;
+      padding: 10px 0;
+      margin-top: -30px;
+
+      &::before {
+        @include svg(arrow, 60, 60, $blue);
+        content: '';
+      }
+
+      &.swiper-button-disabled {
+        opacity: .4;
+        cursor: default;
+      }
+
+      @include breakpoint {
+        padding: 20px 0;
+      }
+    }
+
+    &-prev {
+      left: 0;
+    }
+
+    &-next {
+      right: 0;
+      transform: rotate(-180deg);
+    }
+  }
+
+  @include breakpoint {
+    margin: 0 0;
+  }
+}
+
+// style animaiton
+.menu {
+  &-enter-active,
+  &-leave-active {
+    transition: all .3s ease;
+  }
+
+  &-enter-to,
+  &-leave {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+
+  &-enter,
+  &-leave-to {
+    transform: translate(0, -50px);
+    opacity: 1;
+  }
+}
