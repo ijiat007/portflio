@@ -1,7 +1,7 @@
 <template>
 
   <header :class="{ fix: isFix }">
-    <h1>JUYOUNG SUNG <a href="@/assets/SJY.pdf" download>Resume</a></h1>
+    <h1>JUYOUNG SUNG <a href="<%= BASE_URL %>SJY.pdf" download>Resume</a></h1>
     <nav id="nav">
       <router-link to="/portflio/">Now</router-link>
       <router-link to="/portflio/prev">Past</router-link>
@@ -16,6 +16,7 @@ export default {
   data() {
     return {
       isFix: false,
+      // pdfLink: require("@/assets/SJY.pdf"),
     }
   },
   mounted() {
