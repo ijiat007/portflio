@@ -3,8 +3,8 @@
   <header :class="{ fix: isFix }">
     <h1>JUYOUNG SUNG <a href="#">Resume</a></h1>
     <nav id="nav">
-      <router-link to="/">Home</router-link>
-      <router-link to="/test">Home</router-link>
+      <router-link to="/portflio/">Home</router-link>
+      <router-link to="/portflio/test">Home</router-link>
     </nav>
   </header>
 

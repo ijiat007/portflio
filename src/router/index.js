@@ -3,7 +3,7 @@ import { createWebHistory, createRouter } from 'vue-router';
 const routes = [
   {
     name: 'Home',
-    path: '/',
+    path: '/portflio/',
     component: () => import('@/pages/Home'), // 동적 import
   },
   // {
