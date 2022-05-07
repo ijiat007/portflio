@@ -6,6 +6,11 @@ const routes = [
     path: '/portflio/',
     component: () => import('@/pages/Home'), // 동적 import
   },
+  {
+    name: 'Prev',
+    path: '/portflio/prev',
+    component: () => import('@/pages/Prev'), // 동적 import
+  },
   // {
   //   name: '404',
   //   path: '/404',
