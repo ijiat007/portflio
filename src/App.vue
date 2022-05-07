@@ -1,34 +1,20 @@
 <template>
-  <header :class="{ fix: isFix }">
-      <h1>JUYOUNG SUNG</h1>
-      <ul class="nav" v-scroll-spy-active v-scroll-spy-link>
-      <li>
-        <a>Menu 1</a>
-      </li>
-      <li>
-        <a>Menu 2</a>
-      </li>
-    </ul>
-    </header>
+  <Header />
 
-    <main v-scroll-spy>
-      <div>
-        11111
-      </div>
-      <div>
-        22222
-      </div>
-    </main>
+  <router-view />
 
-    <footer>© juyoung.sung. All Rights Reserved.</footer>
+  <Footer />
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
+    Header,
+    Footer
   },
   data() {
     return {
@@ -54,11 +40,4 @@ export default {
 </script>
 
 <style lang="scss">
-main {
-
-  > div {
-    height: 100vh;
-    border: 1px solid red;
-  }
-}
 </style>

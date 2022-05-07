@@ -3,6 +3,7 @@ module.exports = defineConfig({
   outputDir: './docs',
   publicPath: '/portflio/',
   transpileDependencies: true,
+  lintOnSave: false,
   css: {
     extract: {
       filename: 'style.css?v=[hash:8]',

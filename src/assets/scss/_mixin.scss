@@ -10,7 +10,7 @@
 
 // svg icon
 @function arrow($color) {
-  @return url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15.76 18.581a.84.84 0 0 1 .002 1.175.81.81 0 0 1-1.066.082l-.091-.08-6.6-6.67a.84.84 0 0 1-.08-1.083l.08-.093 6.6-6.67a.81.81 0 0 1 1.157.002.84.84 0 0 1 .077 1.082l-.08.093L9.742 12.5l6.017 6.08z' fill='#{$color}' fill-rule='evenodd'/%3e%3c/svg%3e");
+  @return url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15.735 14.09a1 1 0 0 1-.057 1.414l-3.5 3.23a1 1 0 0 1-1.356 0l-3.5-3.23a1 1 0 1 1 1.356-1.47l1.822 1.682V6a1 1 0 1 1 2 0v9.716l1.822-1.682a1 1 0 0 1 1.413.057z' fill='#{$color}' fill-rule='evenodd'/%3e%3c/svg%3e");
 }
 
 @mixin svg($fn, $width, $height, $color) {
@@ -24,4 +24,20 @@
   background-image: call(get-function($fn), $color);
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+@mixin img($name, $width, $height, $size: contain) {
+  overflow: hidden;
+  display: inline-block;
+  line-height: 99em;
+  vertical-align: top;
+  width: $width + px;
+  height: $height + px;
+  $url:"#{$imgpath}#{$name}.png";
+  background: {
+    image: url($url);
+    repeat: no-repeat;
+    position: 50% 50%;
+    size: $size;
+  }
 }
