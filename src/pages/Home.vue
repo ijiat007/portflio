@@ -71,7 +71,7 @@
         <ul>
           <li>글로벌 온라인 게임 서비스 플랫폼</li>
           <li>Nuxt, SCSS</li>
-          <li>Only Desktop</li>
+          <li>적응형</li>
         </ul>
       </div>
     </section>
