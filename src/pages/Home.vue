@@ -10,7 +10,7 @@
       <h3>Bora Portal <a href="https://www.boraportal.com/" target="_blank">https://www.boraportal.com</a></h3>
       <div class="thumb">
         <div class="img">
-          <img :src="borascope" alt="">
+          <img :src="bora2" alt="">
         </div>
         <ul>
           <li>지갑, 디파이, 토큰 변환, 대체 불가능 토근(NFT), Drops 등의 서비스를 제공하는 블록체인 플랫폼 (Metamask 지갑 사용)</li>
@@ -24,7 +24,7 @@
       <h3>Bora Scope <a href="https://scope.boraportal.net/" target="_blank">https://scope.boraportal.net/</a></h3>
       <div class="thumb">
         <div class="img">
-          <img :src="bora2" alt="">
+          <img :src="borascope" alt="">
         </div>
         <ul>
           <li>토큰의 모든 거래의 이동을 모니터링하고 탐색하는 서비스</li>
@@ -95,10 +95,10 @@ export default {
   data() {
     return {
       bora2: require("@/assets/bora2.png"),
-      borascope: require("@/assets/bora2.png"),
-      todayis: require("@/assets/bora2.png"),
-      cmp: require("@/assets/bora2.png"),
-      play2bit: require("@/assets/bora2.png"),
+      borascope: require("@/assets/borascope.png"),
+      todayis: require("@/assets/todayis.jpeg"),
+      cmp: require("@/assets/cutemypet.png"),
+      play2bit: require("@/assets/play2bit.png"),
     }
   }
 };

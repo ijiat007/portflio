@@ -1,7 +1,7 @@
 <template>
 
   <header :class="{ fix: isFix }">
-    <h1>JUYOUNG SUNG <a href="/SJY.pdf" download>Resume</a></h1>
+    <h1>JUYOUNG SUNG <a href="/portflio/SJY.pdf" download>Resume</a></h1>
     <nav id="nav">
       <router-link to="/portflio/">Now</router-link>
       <router-link to="/portflio/prev">Past</router-link>

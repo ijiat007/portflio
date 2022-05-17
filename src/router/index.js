@@ -4,12 +4,12 @@ const routes = [
   {
     name: 'Home',
     path: '/portflio/',
-    component: () => import('@/pages/Home'), // 동적 import
+    component: () => import('@/pages/Home'),
   },
   {
     name: 'Prev',
     path: '/portflio/prev',
-    component: () => import('@/pages/Prev'), // 동적 import
+    component: () => import('@/pages/Prev'),
   },
   // {
   //   name: '404',
