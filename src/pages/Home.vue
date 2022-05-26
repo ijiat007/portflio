@@ -21,7 +21,7 @@
     </section>
 
     <section>
-      <h3>Bora Scope <a href="https://scope.boraportal.net/" target="_blank">https://scope.boraportal.net/</a></h3>
+      <h3>Bora Scope <a href="https://scope.boraportal.com/" target="_blank">https://scope.boraportal.com/</a></h3>
       <div class="thumb">
         <div class="img">
           <img :src="borascope" alt="">
