@@ -16,7 +16,7 @@
           <li>2023년 7월 리뉴얼 오픈</li>
           <li>지갑, 멀티 체인, 대체 불가능 토근(NFT) 등의 서비스를 제공하는 블록체인 플랫폼</li>
           <li>monorepo 구조로 earn, play, brand 3개의 프로젝트 진행</li>
-          <li>Vue3, TypeScript, SCSS</li>
+          <li>Vue3(composition API), TypeScript, SCSS</li>
           <li>적응형</li>
         </ul>
       </div>
