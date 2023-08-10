@@ -51,7 +51,7 @@
     </section>
 
     <section>
-      <h3>CuteMyPet(beta) <a href="https://www.cutemypet.com/" target="_blank">https://www.cutemypet.com/</a></h3>
+      <h3>CuteMyPet(beta)</h3>
       <div class="thumb">
         <div class="img">
           <img :src="cmp" alt="">
@@ -83,7 +83,7 @@
       <div class="thumb">
         <ul>
           <li>Boraecosystem, Membership : boraportal 전신, 반응형</li>
-          <li>Astelliaroyal : 코드내재화, 반응형 <a href="https://astelliaroyal.itoxi.co.kr/" target="_blank">https://astelliaroyal.itoxi.co.kr/</a></li>
+          <li>Astelliaroyal : 코드내재화, 반응형</li>
           <li>KakaoVX, Promotion Template, Line POD 등</li>
         </ul>
       </div>
