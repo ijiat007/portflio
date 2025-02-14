@@ -3,7 +3,7 @@
     <h2>
       META BORA
       <em>Team service develop</em>
-      <span>2019.11 ~ 현재</span>
+      <span>2019.11 ~ 2024.11</span>
     </h2>
 
     <section>
